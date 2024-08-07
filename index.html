@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+              <p> Engineering student</p>
+              <h1> Hi, I'm <span>Chetana</span>  </h1>
+        </div>
+    
+    </div>
+
+  </div>
+  <!-------about----------->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.jpeg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I'm Chetana, an aspiring engineer fueled by curiosity . Here, you'll find
+            a collection of my projects and skills .  Here, you'll find a collection 
+            of my projects, designs, and technical endeavors, showcasing my passion 
+            for problem-solving and creativity in the world of engineering.</p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('Education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Language</span><br>Python Programming,JAVA programming,C Programming, Database Management(SQL)</li>
+            <li><span>Web Development</span><br>Web Development(HTML,CSS)</li>
+            <li><span>Non-Tech skills</span><br>Excellent Communication skills, Ability to grasp new skills quickly, Teamwork, Versatile, Hardworking</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="Experience">
+          <ul>
+            <li><span>current</span><br>Engineering student</li>
+            <li><span>2023</span><br>Web Development internship at Elite Software</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="Education">
+          <ul>
+            <li><span>10th</span><br>Dnyanda English School</li>
+            <li><span>12th</span><br>Dyansagar High School</li>
+            <li><span>Engineering</span><br>Dr. D.Y.Patil Institute of Management and Research</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <script>
+    
+     var tablink = document.getElementsByClassName("tab-links");
+     var tabcontents = document.getElementsByClassName("tab-contents");
+
+     function opentab(tabname){
+       for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+       }   
+       for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+       }   
+     }
+  </script> 
+</body>
+</html>
